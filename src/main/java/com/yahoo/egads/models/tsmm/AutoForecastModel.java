@@ -111,6 +111,19 @@ public class AutoForecastModel extends TimeSeriesAbstractModel {
 
     }
 
+	/**
+	 * Returns the name of the model-name that is optimal for the data and
+	 * configuration properties provided.
+	 * 
+	 * @return Name of the optimal model if found, else null.
+	 */
+	public String getOptimalModelName() {
+		if (this.myModel != null) {
+			return this.myModel.modelName;
+		}
+		return null;
+	}
+
     public String getModelName() {
         return modelName;
     }
